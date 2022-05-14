@@ -2,11 +2,11 @@
 #!pip install faiss-cpu
 
 
-def Preprocessor(inputfile, sentence_level=True):
+def DocumentUnitProcessor(inputfile, sentence_level=True):
     pyserini_format_json_list = []
     if sentence_level==True:
         id_counter=0
-        for id in input:
+        for id in inputfile:
             if input[id]["全文"]!= None:
                 for sentence in input[id]["全文"].split("。"):
                     if len(sentence) < 512:                        #(移掉超過512長度的句子)
