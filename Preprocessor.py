@@ -2,7 +2,7 @@
 #!pip install faiss-cpu
 
 
-def Preprocessor(inputfile, sentence_level=true):
+def Preprocessor(inputfile, sentence_level=True):
     pyserini_format_json_list = []
     if sentence_level==True:
         id_counter=0
